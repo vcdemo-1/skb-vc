@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Audio Samples</title>
+  <style>
+body {
+  margin:0;
+  padding:10px 30px;
+  background: #fff;
+  color: #111;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+audio {
+  width: 250px;
+  margin-right: 10px;
+}
+.sample {
+  font-size: 0.9em;
+  font-style: italic;
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+</style>
+</head>
+<body>
+    <h2>samples converted by VC-IN model vs samples converted by SKB model </h2>
+  <ul>
+    <li>The models are trained using AISHELL-1 corpus. Audios are resampled to 16kHz.</li>
+    <li>please listent to the converted samples and give a prefer choice for the one which you think is more similar to the target samples" </li>
+  </ul>
+ 
+ 
+     <!-- F2M -->
+    <h3>target-female</h3>
+    <table border="1">
+    <tr>
+      <td>smple index</td>
+      <td>target sample</td>
+      <td>SKB200-ATT128-ppgs-bn-lpc-noencoder</td>
+      <td>SKB200-ATT128-ppgs-bn-lpc-vc</td>
+      <td>SKB200-ATT256-mel-lpc-vc</td>
+    </tr>
+    <!-- MF 1 sample 4 pieces of audios  -->
+    <tr>
+      <td>female01</td>
+      <td>
+        <audio controls>
+        <source src="target/BAC009S0765W0124.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb200-att64-vc/skb200-tar-S0767_BAC009S0767W0412-src-S0765_BAC009S0765W0124.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb200-att128-vc/skb200-frame-tar-S0767_BAC009S0767W0412-src-S0765_BAC009S0765W0124.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb200-att256-vc/skb200-tar-S0767_BAC009S0767W0412-src-S0765_BAC009S0765W0124.wav" type="audio/wav">
+        </audio>
+      </td>
+    </tr>
