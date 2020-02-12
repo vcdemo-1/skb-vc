@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Audio Samples</title>
+  <style>
+body {
+  margin:0;
+  padding:10px 30px;
+  background: #fff;
+  color: #111;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+audio {
+  width: 250px;
+  margin-right: 10px;
+}
+.sample {
+  font-size: 0.9em;
+  font-style: italic;
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+</style>
+</head>
+<body>
+    <h2>Audio samples for the paper: NON-PARALLEL SEQUENCE TO SEQUENCE VOICE CONVERSION FOR ARBITRARY SPEAKERS </h2>
+  <ul>
+    <li>The models are trained using our Mandarin corpus. Audios are resampled to 16kHz.</li>
+    <li>In the sequel, "seq2seq ctc_090 is the abbreviation of sequence-to-sequence voice conversion model with the threshold of 0.90 removing blank tokens.
+      seq2seq ctc_099 is the same way. seq2seq ctc_onehot is the abbreviation of sequence-to-sequence voice conversion model with one-hot encoding, and all blank tokens are thrown away.
+      F2F-VC is the abbreviation of frame-to-frame voice conversion model.(please refer to the paper for the details)" </li>
+    <li>some of utterances are clipped with the same content from source or converted ones in order to speed up page load.
+  </ul>
+
+    <h3>comparison of F2F-VC model and seq2seq-VC model</h3>
+
+      <!-- F2M -->
+    
+    <table border="1">
+    <tr>
+      <td>Convert Model</td>
+      <td>female-2-male</td>
+      <td>male-2-male</td>
+      <td>female-2-female</td>
+      <td>male2-female</td>
+    </tr>
+    <!-- MF 1 sample 4 pieces of audios  -->
+    <tr>
+      <td>target utterance</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/target/male-m11/002990.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/target/male-m11/002993.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/target/female-biaobei/biaobei02994.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/target/female-biaobei/biaobei02995.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+    </tr>
+    <!-- Male2male -->
+    <tr>
+      <td>source utterance</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/source/B199_TTS099179.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/source/B156_TTS077855.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/source/B149_TTS074376.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/source/B192_TTS095610.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+  <!-- FF 10 sample 4 pieces of audios  -->
+    <tr>
+      <td>F2F-VC</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/f2f/f2f-ppgs251-biaobei-f2/B199_TTS099179_ppgs251-f2f-biaobei.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/m2f/f2f-ppgs-biaobei_m2/B156_TTS077855_ppgs251-f2f-biaobei.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/f2m/f2f-ppgs-m11/B149_TTS074376_ppgs251-f2f-m11.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/m2m/f2f-ppgs-m11_m2/B192_TTS095610_ppgs251-f2f-m11.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+    <!-- FF 5 sample 4 pieces of audios  -->
+    <tr>
+      <td>seq2seq ctc_090</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/f2f/four-ppgs249-090-biaobei-m4000_f2/B199_TTS099179_biaobei_ppgs249-090.wav
+" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/m2f/four-ppgs249-090-biaobei-m4000_m2/B156_TTS077855_biaobei_ppgs249-090.wav
+" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/f2m/four-ppgs249-090-m11-m4000_f2/B149_TTS074376_m11_ppgs249-090.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/m2m/four-ppgs249-090-m11-m4000_m2/B192_TTS095610_m11_ppgs249-090.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+    <tr>
+      <td>seq2seq ctc_099</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/f2f/four-ppgs249-099-biaobei-m4000_f2/B199_TTS099179_biaobei_ppgs249-099.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/m2f/four-ppgs249-099-biaobei-m4000_m2/B156_TTS077855_biaobei_ppgs249-099.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/f2m/four-ppgs249-099-m11-m40000_f2/B149_TTS074376_m11_ppgs249-099.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/m2m/four-ppgs249-099-m11-m4000_m2/B192_TTS095610_m11_ppgs249-099.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+    <tr>
+      <td>seq2seq ctc_onehot</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/f2f/four-ppgs249-onehot-biaobei-m40000_f2/B199_TTS099179_biaobei_ppgs249-onehot.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/m2f/four-ppgs249-onehot-biaobei-m4000_m2/B156_TTS077855_biaobei_ppgs249-onehot.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/f2m/four-ppgs249-one-hot-m11-m40000_f2/B149_TTS074376_m11_ppgs249-onehot.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/base_compare/m2m/four-ppgs249-onehot-m11-m4000_m2/B192_TTS095610_m11_ppgs249-onehot.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+    </table>
+
+
+    <!-- MM -->
+    <h3>seq2seq-vc towards arbitrary speakers:</h3>
+    <table border="1">
+    <tr>
+      <td>Convert Model</td>
+      <td>female2female</td>
+      <td>male2female</td>
+      <td>female2male</td>
+      <td>male2male</td>
+    </tr>
+    <tr>
+      <td>target utterance</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/target/female-biaobei/biaobei02994.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/target/female-biaobei/biaobei02995.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/target/male-m11/002994.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/target/male-m11/002998.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+    <tr>
+      <td>source utterance</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/source/B186_TTS092718.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/source/B192_TTS095610.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/source/B149_TTS074352.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/source/B119_TTS059234.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+    <!-- MM 1 sample 4 pieces of audios  -->
+    <tr>
+      <td>seq2seq-VC 50</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/f2f/bb100-ppgs249-099-biaobei-ft50_f2/B186_TTS092718_biaobei_50.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/m2f/bb100-ppgs249-099-biaobei-ft50_m2/B192_TTS095610_biaobei_50.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/f2m/bb100-ppgs249-099-m11-ft50_f2/B149_TTS074352_m11_50.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/m2m/bb100-ppgs249-099-m11-ft50_m2/B119_TTS059234_m11_50.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+    <!-- FF 5 sample 4 pieces of audios  -->
+    <tr>
+      <td>seq2seq-VC 100</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/f2f/bb100-ppgs249-099-biaobei-ft100_f2/B186_TTS092718_biaobei_100.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/m2f/bb100-ppgs249-099-biaobei-ft100_m2/B192_TTS095610_biaobei_100.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/f2m/bb100-ppgs249-099-m11-ft100_f2/B149_TTS074352_m11_ft100.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/m2m/bb100-ppgs249-099-m11-ft100_m2/B119_TTS059234_m11_ft100.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+    <tr>
+      <td>seq2seq-VC 300</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/f2f/bb100-ppgs249-099-biaobei-ft300_f2/B186_TTS092718_biaobei_300.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/m2f/bb100-ppgs249-099-biaobei-ft300_m2/B192_TTS095610_biaobei_300.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/f2m/bb100-ppgs249-099-m11-ft300_f2/B149_TTS074352_m11_ft300.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/m2m/bb100-ppgs249-099-m11-ft300_m2/B119_TTS059234_m11_ft300.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+        <tr>
+      <td>seq2seq-VC 500</td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/f2f/bb100-ppgs249-099-biaobei-ft500_f2/B186_TTS092718_bb100_biaobei_500.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/m2f/bb100-ppgs249-099-biaobei-ft500_m2/B192_TTS095610_bb100_biaobei_500.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/f2m/bb100-ppgs249-099-m11-ft500_f2/B149_TTS074352_m11_500.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="vc_ctc/ft_ctc/m2m/bb100-ppgs249-099-m11-ft500_m2/B119_TTS059234_m11_500.wav" type="audio/wav">
+        </audio>
+      </td>      
+    </tr>
+    </table>     
+</body>
+</html>
