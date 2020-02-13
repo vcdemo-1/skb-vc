@@ -31,7 +31,7 @@ audio {
 </style>
 </head>
 <body>
-    <h2>samples converted by VC-IN model vs samples converted by SKB model </h2>
+    <h2>samples converted by different content encoder models </h2>
   <ul>
     <li>The models are trained using AISHELL-1 corpus. Audios are resampled to 16kHz.</li>
     <li>please listent to the converted samples and give a prefer choice for the one which you think is more similar to the target samples" </li>
@@ -46,29 +46,40 @@ audio {
       <td>target sample</td>
       <td>SKB200-ATT128-ppgs-bn-lpc-noencoder</td>
       <td>SKB200-ATT128-ppgs-bn-lpc-vc</td>
-      <td>SKB200-ATT256-mel-lpc-vc</td>
+      <td>SKB200-ATT256-mel-mel-lpc-vc</td>
     </tr>
     <!-- MF 1 sample 4 pieces of audios  -->
     <tr>
       <td>female01</td>
       <td>
         <audio controls>
-        <source src="target/BAC009S0765W0124.wav" type="audio/wav">
+        <source src="target/BAC009S0768W0393.wav" type="audio/wav">
         </audio>
       </td>
       <td>
         <audio controls>
-        <source src="skb200-att64-vc/skb200-tar-S0767_BAC009S0767W0412-src-S0765_BAC009S0765W0124.wav" type="audio/wav">
+        <source src="skb200-att128-noencoder-ppgs-bn-lpc/skb200-frame-tar-S0768_BAC009S0768W0393-src-S0765_BAC009S0765W0124.wav" type="audio/wav">
         </audio>
       </td>
       <td>
         <audio controls>
-        <source src="skb200-att128-vc/skb200-frame-tar-S0767_BAC009S0767W0412-src-S0765_BAC009S0765W0124.wav" type="audio/wav">
+        <source src="skb200-att128-vc/skb200-frame-tar-S0768_BAC009S0768W0393-src-S0765_BAC009S0765W0124.wav" type="audio/wav">
         </audio>
       </td>
       <td>
         <audio controls>
-        <source src="skb200-att256-vc/skb200-tar-S0767_BAC009S0767W0412-src-S0765_BAC009S0765W0124.wav" type="audio/wav">
+        <source src="skb200-att128-mel80-mel80-lpc32/skb200-tar-BAC009S0768W0393-src-S0765_BAC009S0765W0124.wav" type="audio/wav">
         </audio>
       </td>
     </tr>
+      
+  </table>
+      
+      
+      
+
+      
+      
+   
+</body>
+</html>
